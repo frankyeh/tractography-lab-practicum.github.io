@@ -10,6 +10,7 @@ We regularly host DSI Studio training throughout the year. Future workshops will
 
 **2022 DSI Studio Workshop**
 
+- Week1: (We failed to record the first week's course)
 - Week2: White Matter Tract [(youtube)](https://www.youtube.com/watch?v=V2pxI2tooPs) [(bilibili)](https://www.bilibili.com/video/BV1i64y1J75L/)
 - Week3: Fiber Tracking [(youtube)](https://www.youtube.com/watch?v=oJK8jwTHVhc) [(bilibili)](https://www.bilibili.com/video/BV17a4y1z7jM/)
 - Week4: Diffusion MRI Basics [(youtube)](https://www.youtube.com/watch?v=9bnZeJ-M5Is) [(bilibili)](https://www.bilibili.com/video/BV1pC4y1B7Tz/)
