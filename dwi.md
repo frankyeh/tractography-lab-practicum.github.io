@@ -128,6 +128,10 @@ source: [Morozov, Sergey, et al. "Diffusion processes modeling in magnetic reson
 **CLI for EDDY**
 ```
 dsi_studio --action=rec --source=sub-01_dwi_sub-01_run-1_dwi.nii.gz.src.gz --cmd="[Step T2][Corrections][EDDY]" --save_src=preproc.src.gz
+
+dsi_studio --action=rec --source=*.nii.gz.src.gz --cmd="[Step T2][Corrections][EDDY]" --save_src=*.post_eddy.src.gz
+
+
 ```
 
     
@@ -148,6 +152,11 @@ dsi_studio --action=rec --source=sub-01_dwi_sub-01_run-1_dwi.nii.gz.src.gz --cmd
 **CLI for TOPUP+EDDY**
 ```
 dsi_studio --action=rec --source=sub-01_dwi_sub-01_acq-multiband_dwi.nii.gz.src.gz --rev_pe=sub-01_fmap_sub-01_acq-multiband_dir-PA_dwi.nii.gz --save_src=preproc.src.gz
+
+dsi_studio --action=rec --source=*-multiband_dwi.nii.gz.src.gz --rev_pe=*-multiband_dir-PA_dwi.nii.gz --save_src=*.post_topup_eddy.preproc.src.gz
+
+
+
 ```
 
 - Recommended steps: TOPUP (handles susceptibility) + EDDY (handles eddy distortion and motion displacement)
