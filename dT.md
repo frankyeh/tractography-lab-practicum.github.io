@@ -71,7 +71,7 @@ For each patient, run the following:
 ```
 dsi_studio --action=rec --source=*.src.gz --method=7 --output=*.qsdr.fib.gz
 dsi_studio --action=exp --source=*.fib.gz --export=dti_fa
-dsi_studio --action=trk --source=HCP1065.fib.gz --other_slices=sub-SCA201_ses-01_dwi.qsdr.fib.gz.dti_fa.nii.gz,sub-SCA201_ses-02_dwi.qsdr.fib.gz.dti_fa.nii.gz --dt_metric1=sub-SCA201_ses-01_dwi --dt_metric2=sub-SCA201_ses-02_dwi --dt_threshold=0.2 --seed_count=10000000 --min_length=30 --output=sub-SCA201.tt.gz
+dsi_studio --action=trk --source=0 --other_slices=sub-SCA201_ses-01_dwi.qsdr.fib.gz.dti_fa.nii.gz,sub-SCA201_ses-02_dwi.qsdr.fib.gz.dti_fa.nii.gz --dt_metric1=sub-SCA201_ses-01_dwi --dt_metric2=sub-SCA201_ses-02_dwi --dt_threshold=0.2 --seed_count=10000000 --min_length=30 --output=sub-SCA201.tt.gz
 
 dsi_studio --action=trk --loop=*_ses-01_dwi.qsdr.fib.gz --source=0 --other_slices=*_ses-01_dwi.qsdr.fib.gz.dti_fa.nii.gz,*_ses-02_dwi.qsdr.fib.gz.dti_fa.nii.gz --dt_metric1=*_ses-01_dwi --dt_metric2=*_ses-02_dwi --dt_threshold=0.2 --seed_count=10000000 --min_length=30 --output=*.tt.gz
 ```
@@ -97,7 +97,7 @@ dsi_studio --action=trk --source=*_ses-01_dwi.src.gz.gqi.1.25.fib.gz --other_sli
 summary: compare patients' scans with their **age-sex-matched** scan regressed from the control subjects.
 
 for each patient, run the following:
-1. Open the QSDR-FIB file of the baseline scan and [Export] dti_fa
+1. Open the [QSDR-FIB](https://pitt-my.sharepoint.com/:f:/g/personal/yehfc_pitt_edu/Eg1-kg57NgxMmLHjGFTInpYBZQ0FPaA3sunDruSNq7QVxw?e=tXdwkq) files of the baseline scan and [Export] dti_fa
 2. Open the template FIB file
 3. [Slices][Inser Other Images]=the exported FA maps of the baseline scan.
 4. [Slices][Inser Other Images]=sub-control_only.dti_fa.db.fib.gz and input [subject's age and sex](https://pitt-my.sharepoint.com/:t:/g/personal/yehfc_pitt_edu/ERmqnTRGs11LhxeloKHUWnoBhtMPQ-YpWB-h4LVeNyKRqg?e=2cha4i) for generating age-sex-matched data. 
