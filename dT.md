@@ -63,7 +63,7 @@ summary: comparing patients' baseline scans with follow-up scans in the template
 - use template as the tracking framework.
 
 For each patient, run the following:
-1. Run QSDR reconstructions on baseline and followup SRC files. 
+1. Run QSDR reconstructions on baseline and followup SRC files. ([processed data](https://pitt-my.sharepoint.com/:f:/g/personal/yehfc_pitt_edu/Eg1-kg57NgxMmLHjGFTInpYBZQ0FPaA3sunDruSNq7QVxw?e=tXdwkq)
 2. Export FA maps from all scans.
 3. Open the template FIB file and [Slices][Inser Other Images]=the exported FA maps of the first and second scan.
 4. Specify metrics at [Step T3c: Options][Tracking Parameters][Differential Tracking] and run differential fiber tracking.
@@ -71,7 +71,7 @@ For each patient, run the following:
 ```
 dsi_studio --action=rec --source=*.src.gz --method=7 --output=*.qsdr.fib.gz
 dsi_studio --action=exp --source=*.fib.gz --export=dti_fa
-dsi_studio --action=trk --source=0 --other_slices=sub-SCA201_ses-01_dwi.qsdr.fib.gz.dti_fa.nii.gz,sub-SCA201_ses-02_dwi.qsdr.fib.gz.dti_fa.nii.gz --dt_metric1=sub-SCA201_ses-01_dwi --dt_metric2=sub-SCA201_ses-02_dwi --dt_threshold=0.2 --seed_count=10000000 --min_length=30 --output=sub-SCA201.tt.gz
+dsi_studio --action=trk --source=HCP1065.fib.gz --other_slices=sub-SCA201_ses-01_dwi.qsdr.fib.gz.dti_fa.nii.gz,sub-SCA201_ses-02_dwi.qsdr.fib.gz.dti_fa.nii.gz --dt_metric1=sub-SCA201_ses-01_dwi --dt_metric2=sub-SCA201_ses-02_dwi --dt_threshold=0.2 --seed_count=10000000 --min_length=30 --output=sub-SCA201.tt.gz
 
 dsi_studio --action=trk --loop=*_ses-01_dwi.qsdr.fib.gz --source=0 --other_slices=*_ses-01_dwi.qsdr.fib.gz.dti_fa.nii.gz,*_ses-02_dwi.qsdr.fib.gz.dti_fa.nii.gz --dt_metric1=*_ses-01_dwi --dt_metric2=*_ses-02_dwi --dt_threshold=0.2 --seed_count=10000000 --min_length=30 --output=*.tt.gz
 ```
