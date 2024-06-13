@@ -96,14 +96,12 @@ source: [Morozov, Sergey, et al. "Diffusion processes modeling in magnetic reson
 
 ### Quality Checks on dMRI data 
     
-- Hands-on
+- Manual check
   - [sub-01_run-2_dwi.nii.gz](https://openneuro.org/crn/datasets/ds002087/snapshots/1.0.0/files/sub-01:dwi:sub-01_run-2_dwi.nii.gz)
   - [sub-01_run-2_dwi.bval](https://openneuro.org/crn/datasets/ds002087/snapshots/1.0.0/files/sub-01:dwi:sub-01_run-2_dwi.bval)
   - [sub-01_run-2_dwi.bvec](https://openneuro.org/crn/datasets/ds002087/snapshots/1.0.0/files/sub-01:dwi:sub-01_run-2_dwi.bvec)
   - source: [Datasets with and without deliberate head movements for detection and imputation of dropout in diffusion MRI](https://openneuro.org/datasets/ds002087/)
-  - Identify motion induced signals issues
-  - QC in DSI Studio
-  
+
 - Motion artifacts (5 min)
   - Check sagittal slices
   - Check slice signal dropout
@@ -172,6 +170,15 @@ dsi_studio --action=rec --source=*-multiband_dwi.nii.gz.src.gz --rev_pe=*-multib
     - create SRC from reversed-PE DWI
     - apply topup + eddy: [Step T2][Correction][TOPUP/EDDY] or specify --rev_pe=rev_dwi.rsrc.gz
 
+- Automatic QC
+  - Neighboring DWI correlation
+  - Diffusion contract
+  - Slice dropout
+
+‘‘‘
+dsi_studio --action=qc --source=./src_folder
+
+‘‘‘
 
 ## Assignment :
 
