@@ -150,10 +150,7 @@ dsi_studio --action=rec --source=*.nii.gz.src.gz --cmd="[Step T2][Corrections][E
 **CLI for TOPUP+EDDY**
 ```
 dsi_studio --action=rec --source=sub-01_dwi_sub-01_acq-multiband_dwi.nii.gz.src.gz --rev_pe=sub-01_fmap_sub-01_acq-multiband_dir-PA_dwi.nii.gz --save_src=preproc.src.gz
-
 dsi_studio --action=rec --source=*-multiband_dwi.nii.gz.src.gz --rev_pe=*-multiband_dir-PA_dwi.nii.gz --save_src=*.post_topup_eddy.preproc.src.gz
-
-
 
 ```
 
@@ -175,10 +172,9 @@ dsi_studio --action=rec --source=*-multiband_dwi.nii.gz.src.gz --rev_pe=*-multib
   - Diffusion contract
   - Slice dropout
 
-‘‘‘
+```
 dsi_studio --action=qc --source=./src_folder
-
-‘‘‘
+```
 
 ## Assignment :
 
